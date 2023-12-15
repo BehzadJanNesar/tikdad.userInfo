@@ -1,0 +1,164 @@
+@font-face {
+   font-family: "Dirooz";
+   src: url("font/Dirooz-FD-WOL.ttf") format("TrueType");
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   font-family: "Dirooz";
+   direction: rtl;
+}
+.user-information--container {
+   width: 90%;
+   background-color: #fff;
+   box-shadow: 0 1px 15px #00000045;
+   border-radius: 5px;
+   margin: auto;
+   padding: 10px;
+}
+.user-title .title-sec {
+   font-weight: 700;
+   font-size: 20px;
+}
+.user-title .title-sec > span:nth-child(1) {
+   color: #4d0070;
+}
+.user-title .title-sec > span:nth-child(2) {
+   color: #7c7c7c;
+}
+.user-title .user-name {
+   font-weight: 700;
+}
+.user-information--container .user-settings {
+   width: 100%;
+   height: 400px;
+   overflow-y: scroll;
+   padding: 0 20px;
+   margin-top: 15px;
+   direction: ltr;
+}
+.user-information--container .user-settings::-webkit-scrollbar-thumb {
+   background-color: #9e78a3df;
+   border-radius: 3px;
+}
+.user-information--container .user-settings::-webkit-scrollbar {
+   border-radius: 3px;
+   background-color: #f1d3ff;
+   width: 8px;
+}
+.sett-commonStyle {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: row-reverse;
+   padding: 8px 0;
+   color: #191919;
+}
+.sett-commonStyle .toggle-icon {
+   width: 36px;
+   height: 15px;
+   background-color: #d7d7d7;
+   border-radius: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: end;
+   cursor: pointer;
+}
+.toggle-icon::before {
+   content: "\2212";
+   width: 20px;
+   height: 21px;
+   color: #fff;
+   background-color: #272626;
+   font-size: 26px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.toggle-icon--on::after {
+   content: "\002714";
+   width: 24px;
+   height: 25px;
+   color: #fff;
+   background-color: #b222c5;
+   font-size: 32px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.setting--desactive-box > p {
+   color: #f87070;
+}
+.setting--message-box {
+   width: 100%;
+   padding: 15px 0;
+}
+.message-box--btns {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-direction: row-reverse;
+}
+.setting--message-box p {
+   color: #989898;
+   font-weight: 700;
+   padding: 7px;
+   text-align: right;
+}
+.message-box--btns > button {
+   padding: 5px 10px;
+   background-color: #bf5cccc7;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   font-family: "Dirooz";
+   cursor: pointer;
+   font-size: 14px;
+}
+.setting--showPlanningTable,
+.setting--deleteUser,
+.setting--editProfile {
+   display: flex;
+   align-items: center;
+   flex-direction: row-reverse;
+   gap: 10px;
+   padding: 8px 0;
+   color: #191919;
+}
+.setting--deleteUser {
+   color: #ff4f4f;
+}
+
+@media screen and (min-width: 500px) {
+   .user-information--container {
+      max-width: 760px;
+   }
+   .user-information--container .user-settings {
+      padding: 0 15%;
+   }
+   .message-box--btns {
+      justify-content: unset;
+      gap: 10px;
+   }
+   .user-title {
+      padding: 0 15%;
+   }
+   .user-title .title-sec {
+      font-size: 25px;
+   }
+   .user-title .user-name {
+      font-size: 20px;
+   }
+}
+@media screen and (max-width: 400px) {
+   .message-box--btns > button {
+      font-size: 3.7vw;
+   }
+}

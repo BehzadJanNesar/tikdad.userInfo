@@ -20,19 +20,6 @@ body {
    margin: auto;
    padding: 10px;
 }
-.user-title .title-sec {
-   font-weight: 700;
-   font-size: 20px;
-}
-.user-title .title-sec > span:nth-child(1) {
-   color: #4d0070;
-}
-.user-title .title-sec > span:nth-child(2) {
-   color: #7c7c7c;
-}
-.user-title .user-name {
-   font-weight: 700;
-}
 .user-information--container .user-settings {
    width: 100%;
    height: 400px;
@@ -41,13 +28,29 @@ body {
    margin-top: 15px;
    direction: ltr;
 }
+.addNote-btn {
+   width: 100%;
+   border: none;
+   font-size: 16px;
+   font-weight: 500;
+   text-align: end;
+   padding: 7px 15px;
+   font-family: inherit;
+   border-radius: 7px;
+   color: #696969;
+   cursor: pointer;
+}
+.addNote-btn > i {
+   margin-left: 10px;
+   color: #000;
+}
 .user-information--container .user-settings::-webkit-scrollbar-thumb {
-   background-color: #9e78a3df;
+   background-color: #cab3dd;
    border-radius: 3px;
 }
 .user-information--container .user-settings::-webkit-scrollbar {
    border-radius: 3px;
-   background-color: #f1d3ff;
+   background-color: #e3daef;
    width: 8px;
 }
 .sett-commonStyle {
@@ -58,15 +61,20 @@ body {
    padding: 8px 0;
    color: #191919;
 }
-.sett-commonStyle .toggle-icon {
+.sett-commonStyle .toggle-icon,
+.sett-commonStyle .toggle-icon--on {
    width: 36px;
    height: 15px;
    background-color: #d7d7d7;
    border-radius: 30px;
    display: flex;
    align-items: center;
-   justify-content: end;
+   justify-content: start;
    cursor: pointer;
+}
+.sett-commonStyle .toggle-icon--on {
+   justify-content: end;
+   background-color: #a962f0;
 }
 .toggle-icon::before {
    content: "\2212";
@@ -80,20 +88,20 @@ body {
    align-items: center;
    justify-content: center;
 }
-.toggle-icon--on::after {
+.toggle-icon--on::before {
    content: "\002714";
-   width: 24px;
-   height: 25px;
+   width: 22px;
+   height: 23px;
    color: #fff;
-   background-color: #b222c5;
-   font-size: 32px;
+   background-color: #7726cd;
+   font-size: 15px;
    border-radius: 50%;
    display: flex;
    align-items: center;
    justify-content: center;
 }
 .setting--desactive-box > p {
-   color: #f87070;
+   color: #bb4861;
 }
 .setting--message-box {
    width: 100%;
@@ -114,7 +122,7 @@ body {
 }
 .message-box--btns > button {
    padding: 5px 10px;
-   background-color: #bf5cccc7;
+   background-color: #a170c2;
    color: #fff;
    border: none;
    border-radius: 5px;
@@ -133,7 +141,7 @@ body {
    color: #191919;
 }
 .setting--deleteUser {
-   color: #ff4f4f;
+   color: #bb4861;
 }
 
 @media screen and (min-width: 500px) {
@@ -147,18 +155,13 @@ body {
       justify-content: unset;
       gap: 10px;
    }
-   .user-title {
-      padding: 0 15%;
-   }
-   .user-title .title-sec {
-      font-size: 25px;
-   }
-   .user-title .user-name {
-      font-size: 20px;
-   }
 }
 @media screen and (max-width: 400px) {
    .message-box--btns > button {
       font-size: 3.7vw;
+   }
+   .addNote-btn {
+      font-size: 15px;
+      padding: 5px;
    }
 }
